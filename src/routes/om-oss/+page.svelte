@@ -25,7 +25,8 @@
 <div class="fixed-page-container">
     <div class="page-container">
         <h1>Hvem er vi?</h1>
-        <p><strong>Vi er skolerevyen ved Lillestrøm videregående skole. Revyen er helt elevstyrt og har vært det helt siden den ble startet.</strong></p>
+        <p><strong>Festivalente er en festival som arrangeres av Musikklinja ved Lillestrøm videregående skole.</strong></p>
+        <p><strong>Festivalen inneholder variert med musikksjangre fordelt på flere ulike konserter.</strong></p>
     </div>
 </div>
 

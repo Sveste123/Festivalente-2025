@@ -11,7 +11,7 @@
   const { load } = useLoader(TextureLoader);
   let snowflakeTexture;
 
-  const snowCount = 1;
+  const snowCount = 3000;
   let snowParticles = [];
 
   type $$Props = Props<THREE.Group>
@@ -25,21 +25,28 @@
   /* Snøfnugg */
   const createSnowParticles = () => {
     return Array.from({ length: snowCount }, () => ({
-      position: [0, 0, 0],
-      scale: 0.8 // Tilfeldig mellom 0.005 og 0.04
+      position: [
+        Math.random() * 0.6 - 0.3, // X: tilfeldig mellom -10 og 10
+        Math.random() * 1.8 - 0.1, // Y: tilfeldig mellom -10 og 10
+        Math.random() * 0.6 - 0.3  // Z: tilfeldig mellom -10 og 10
+      ],
+      scale: Math.random() * 0.003 // Tilfeldig mellom 0.005 og 0.04
     }));
   };
 
   onMount(async () => {
-    snowflakeTexture = await load('/festivalente_dritt_plakat.png');
+    snowflakeTexture = await load('/snowflake.png');
     snowParticles = createSnowParticles();
   });
 </script>
 
-<Theatre config={{ state: state }} studio={{ hide: true, enabled: false }}>
+<Theatre config={{ state: state }} studio={{ hide: true }}>
   <Sequence autoplay>
-    <SheetObject key="Logo" props={{ scale: 0, opacity: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
+    <SheetObject key="Snow" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T is={ref} dispose={false} {...$$restProps}  
+        rotation.x={values.rotationx} 
+        rotation.y={values.rotationy} 
+        rotation.z={values.rotationz} 
         position.x={values.positionx} 
         position.y={values.positiony} 
         position.z={values.positionz} 

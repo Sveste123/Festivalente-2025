@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Er du klar?</title>
+		<title>Festivalente 2025</title>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,12 +12,12 @@
 			position: fixed;
 			margin: 0;
 			font-family: Arial, sans-serif;
-			background: #000000;
+			background: #ffffe6;
 			height: 100%;
 			width: 100%;
 			justify-content: center;
 			align-items: center;
-			padding: 0 0px;
+			padding: 0 20px;
 			line-height: 1.6;
 			z-index: 3;
 		}
@@ -25,7 +25,7 @@
 			display: flex;
 			position: fixed;
 			left: 0%;
-			top: 0%;
+			top: 6%;
 			justify-content: center; /* Sentrer horisontalt */
 			align-items: center; /* Sentrer vertikalt */
 			width: 100%;
@@ -71,15 +71,15 @@
 			position: absolute;
 			width: auto;
 			height: auto;
-			max-width: 300%;
-			max-height: 300%;
+			max-width: 500%;
+			max-height: 220%;
 			z-index: 1;
 		}
-		@media (max-width: 700px) {
+		@media (max-width: 500px) {
 			.overlay img {
 				width: auto;
 				height: auto;
-				max-width: 500%;
+				max-width: 300%;
 				max-height: 500%;
 				z-index: 1;
 			}
@@ -92,15 +92,15 @@
 			justify-content: center; /* Sentrer horisontalt */
 			align-items: center; /* Sentrer vertikalt */
 			width: 100%;
-			height: 100%; /* Fyll hele høyden av visningsporten */
-			background-color: #000000; /* Bakgrunnsfarge */
+			height: 80%; /* Fyll hele høyden av visningsporten */
+			background-color: #ffffe6; /* Bakgrunnsfarge */
 		}
 		/* Watermark */
 		.watermark-container {
 			position: fixed;
 			width: 80%;
 			height: 80%;
-			background-color: #717cff;
+			background-color: #ffffe6;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 			overflow: hidden;
 		}
@@ -123,7 +123,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: #717cff;
+			background-color: #000000;
 			padding: 15px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 			z-index: 1100;
@@ -131,7 +131,7 @@
 		.top-menu a {
 			margin: 15px;
 			text-decoration: none;
-			color: white;
+			color: #ffffe6;
 			font-size: 22px;
 			font-weight: bold;
 			text-align: center;
@@ -142,8 +142,8 @@
 	
 		/* Responsive Container */
 		.page-container {
-			/* margin: 1px auto;
-			padding: 5px; */
+			margin: 1px auto;
+			padding: 5px;
 			text-align: center;
 			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 		}
@@ -159,7 +159,7 @@
 
 		h1 {
 			text-align: center;
-			color: white;
+			color: rgb(0, 0, 0);
 			font-size: 2em;
 			margin-bottom: 0px;
 		}
@@ -173,7 +173,7 @@
 		}
 	
 		strong {
-			color: white;
+			color: rgb(0, 0, 0);
 		}
 	
 		/* Liste-stil */
@@ -193,7 +193,7 @@
 		}
 	
 		ul li:hover {
-			background: #5a68d8;
+			background: #000000;
 			cursor: pointer;
 		}
 		/* Media Query for Narrow Screens */
@@ -204,16 +204,17 @@
 				position: fixed;
 				width: 100%;
 				top: 0;
-				background: #717cff; /* Valgfritt, for tydelig separasjon */
+				background: #000000; /* Valgfritt, for tydelig separasjon */
 			}
 			.top-menu a {
 				margin: 2px;
 				font-size: 16px;
 				text-align: center; /* Sentraliser teksten */
+				color: #ffffe6;
 			}
 			/* Første rad: de tre første elementene */
 			.top-menu a:nth-child(-n+3) {
-				flex: 1 1 27%; /* Del linjen i tre like deler */
+				flex: 1 1 18%; /* Del linjen i tre like deler */
 			}
 			/* Andre rad: de fire siste elementene */
 			.top-menu a:nth-child(n+4) {
@@ -228,7 +229,7 @@
 				margin: 0;
 			}
 			.fixed-page-container {
-				top: 25%;
+				top: 20%;
 			}
 			.left-button {
 				top: 30px;
