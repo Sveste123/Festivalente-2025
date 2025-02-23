@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<div class="youtube-scroller-container">
+<!-- <div class="youtube-scroller-container">
     {#if showIndicator}
         <img alt="Finger" class="scrollhand" src="/scrollhand.png"/>
     {/if}
@@ -125,4 +125,4 @@
         </div>
     </div>
     <button class="scroll-button right-button" aria-label="Scroll right" on:click={nextButton}>&#9654;</button>
-</div>
+</div> -->
