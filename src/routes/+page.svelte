@@ -9,13 +9,13 @@
     }
 
 </script>
-
-<!-- <div class="app" on:pointerdown={showIndicatorFalse}>
+<!-- 
+<div class="app" on:pointerdown={showIndicatorFalse}>
   <App />
 </div> -->
 
 <div class="overlay">
-  <img src="/festivalente_dritt_plakat.png" alt="Overlay" />
+  <img src="/festivalente_dritt_plakat.png" alt="Overlay"/>
 </div>
 
 {#if showIndicator}

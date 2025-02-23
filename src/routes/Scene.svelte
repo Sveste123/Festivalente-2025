@@ -45,7 +45,7 @@
   position={cameraProps.position} 
   >
 
-  <OrbitControls
+  <!-- <OrbitControls
     enableZoom={false}
     enableDamping={true}
     enablePan={false}
@@ -54,10 +54,10 @@
     target={[0, 0, 0]}
     maxPolarAngle={1.4}
     minPolarAngle={0}
-  />
+  /> -->
 
-  <BackgroundCircles
-  />
+  <!-- <BackgroundCircles
+  /> -->
 
   
 </T.PerspectiveCamera>
@@ -85,7 +85,7 @@
   opacity={0.5}
 />
 
-<Snohaug
+<!-- <Snohaug
   interactive
   recieveShadow
 />
@@ -93,16 +93,16 @@
 <Snohaug2 
   interactive
   recieveShadow
-/>
+/> -->
 
 <Spark 
   interactive
   castShadow
 />
 
-<Snow/>
+<!-- <Snow/>
 
-<Snosprut/>
+<Snosprut/> -->
 
 <!-- <Text
   text="1MKA"

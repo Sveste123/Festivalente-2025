@@ -31,7 +31,7 @@
 			width: 100%;
 			height: 90%; /* Fyll hele høyden av visningsporten */
 			pointer-events: none; /* Ensures it doesn't block interactions with the canvas */
-			z-index: 2; /* Make sure it's on top of the canvas */
+			z-index: 1; /* Make sure it's on top of the canvas */
 		}
 		.scrollhand {
 			display: flex;
@@ -94,6 +94,7 @@
 			width: 100%;
 			height: 80%; /* Fyll hele høyden av visningsporten */
 			background-color: #ffffe6; /* Bakgrunnsfarge */
+			z-index: 1000;
 		}
 		/* Watermark */
 		.watermark-container {
