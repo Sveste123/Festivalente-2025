@@ -1,6 +1,7 @@
 <script lang="ts">
     import App from "../lib/components/App.svelte"
     import { List, type ListOptions } from 'svelte-tweakpane-ui';
+    import { Analytics } from '@vercel/analytics/next';
 </script>
 
 <div class="top-menu">
@@ -20,3 +21,5 @@
 <div class="watermark">
     Alle rettigheter tilhører © Festivalente | Org.nr. xxx xxx xxx
 </div>
+
+<Analytics />

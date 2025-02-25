@@ -30,6 +30,7 @@
     "@threlte/gltf": "^2.0.3",
     "@threlte/rapier": "^2.0.0",
     "@threlte/theatre": "^2.1.7",
+    "@vercel/analytics": "^1.5.0",
     "sharp": "^0.33.5",
     "svelte-tweakpane-ui": "^1.2.2",
     "three": "^0.159.0",
