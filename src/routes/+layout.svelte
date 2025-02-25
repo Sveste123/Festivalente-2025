@@ -1,10 +1,6 @@
 <script lang="ts">
     import App from "../lib/components/App.svelte"
     import { List, type ListOptions } from 'svelte-tweakpane-ui';
-    import { dev } from '@app/environment';
-    import { injectAnalytics } from '@vercel/analytics/sveltekit';
-    
-    injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 <div class="top-menu">
