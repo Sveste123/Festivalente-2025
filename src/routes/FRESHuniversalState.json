@@ -2110,6 +2110,197 @@
             "trackIdByPropPath": {
               "[\"redirect\"]": "QUyQY18JcU"
             }
+          },
+          "LP": {
+            "trackData": {
+              "sueoaLw3TH": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "_lvebQwZqj",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 5.4
+                  }
+                ]
+              },
+              "kWro5BAEah": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"rotationx\"]",
+                "keyframes": [
+                  {
+                    "id": "If4MmalxbO",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0.5
+                    ],
+                    "type": "bezier",
+                    "value": -25
+                  },
+                  {
+                    "id": "--8UsfvEEo",
+                    "position": 5.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      0.5,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.5
+                  }
+                ]
+              },
+              "pppYc0i29w": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"positiony\"]",
+                "keyframes": [
+                  {
+                    "id": "dpuQXOg4dD",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 10
+                  },
+                  {
+                    "id": "kBEGQwuPGV",
+                    "position": 5.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.45
+                  }
+                ]
+              },
+              "161yAiDB5T": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"positionx\"]",
+                "keyframes": [
+                  {
+                    "id": "R6xCa6s6yi",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 23
+                  },
+                  {
+                    "id": "K3bTii0uNm",
+                    "position": 5.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              },
+              "0xZU2k3sJP": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"positionz\"]",
+                "keyframes": [
+                  {
+                    "id": "A7JydKJFPZ",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 34
+                  },
+                  {
+                    "id": "9blcRdyzIg",
+                    "position": 5.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              },
+              "bYFvxn3B4_": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "LP:[\"rotationy\"]",
+                "keyframes": [
+                  {
+                    "id": "idNDsDth1-",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ktjn54MZsY",
+                    "position": 5.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 10
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "sueoaLw3TH",
+              "[\"rotationx\"]": "kWro5BAEah",
+              "[\"positiony\"]": "pppYc0i29w",
+              "[\"positionx\"]": "161yAiDB5T",
+              "[\"positionz\"]": "0xZU2k3sJP",
+              "[\"rotationy\"]": "bYFvxn3B4_"
+            }
           }
         }
       }
@@ -2117,6 +2308,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "WWm96YMi-SsWRdly",
     "S48x_XNqZxoHso5j",
     "SgkyPER4jpwii2xl",
     "RqWfeNBjGVaVA7vK",
@@ -2165,7 +2357,6 @@
     "XSb3dxmHOIxc3AlX",
     "REv3229JiAxwhxOj",
     "KtuivKFSHJebvG78",
-    "f90XExrBczSOaGBB",
-    "pxAibRn8csDuO8tn"
+    "f90XExrBczSOaGBB"
   ]
 }
