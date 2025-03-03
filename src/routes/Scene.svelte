@@ -6,7 +6,7 @@
   import { writable } from 'svelte/store';
   // import * as Utils from 'three/src/math/MathUtils'
   import { Environment, interactivity, Text, useCursor } from '@threlte/extras'
-	import Spark from './Spark.svelte';
+	import Spark from './LP.svelte';
 
   interactivity();
   
@@ -16,6 +16,7 @@
 	import Snohaug from './Snohaug.svelte';
 	import Snohaug2 from './Snohaug2.svelte';
   import BackgroundCircles from './BackgroundCircles.svelte'
+	import Lp from './LP.svelte';
 
   /* SNOW-SCRIPT END */
 
@@ -34,15 +35,19 @@
 
   // Reactive camera properties
   $: cameraProps = $isSmallScreen
-    ? { fov: 55, position: [0, 0.1, 0.4] } // Small screen
-    : { fov: 55, position: [0, 0.1, 0.3] }; // Large screen
+    ? { fov: 55, position: {x: 0, y: 0, z: 70} } // Small screen
+    : { fov: 55, position: {x: 0, y: 0, z: 50} }; // Large screen
+  
+  // console.log(position);
 
 </script>
-
-<T.PerspectiveCamera
+  <T.PerspectiveCamera
   makeDefault
   fov={cameraProps.fov}
-  position={cameraProps.position} 
+  position.x={cameraProps.position.x}
+  position.y={cameraProps.position.y}
+  position.z={cameraProps.position.z}
+
   >
 
   <!-- <OrbitControls
@@ -62,20 +67,20 @@
   
 </T.PerspectiveCamera>
 
+
 <!-- <Environment 
   files='/EnvironmentalLights.hdr'
 /> -->
 
 <T.DirectionalLight 
-  intensity={7} 
-  position={[5, 4, 5]}
+  intensity={1} 
+  position={[15, 14, 15]}
   castShadow
 />
 
 <T.AmbientLight 
-  intensity={2.66} 
+  intensity={3} 
   position={[0.5, 0.5, 0.5]}
-  castShadow
 />
 
 <ContactShadows
@@ -95,7 +100,7 @@
   recieveShadow
 /> -->
 
-<Spark 
+<Lp 
   interactive
   castShadow
 />
