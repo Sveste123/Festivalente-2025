@@ -3,13 +3,13 @@
   import { List, type ListOptions } from 'svelte-tweakpane-ui';
 </script>
 
-<!-- <div class="app">
+<div class="app">
   <App />
-</div> -->
-
-<div class="overlay">
-  <img src="/festivalente_dritt_plakat.png" alt="Overlay"/>
 </div>
+
+<!-- <div class="overlay">
+  <img src="/festivalente_dritt_plakat.jpg" alt="Overlay"/>
+</div> -->
 
 <!-- {#if showIndicator}
   <img alt="finger" class="scrollhand" src="/scrollhand.png"/>

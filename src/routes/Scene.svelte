@@ -12,11 +12,13 @@
   
   /* SNOW-SCRIPT START*/
   import Snosprut from './Snosprut.svelte';
-  import Snow from './Snow.svelte';
+  import Plakat from './Plakat.svelte';
 	import Snohaug from './Snohaug.svelte';
 	import Snohaug2 from './Snohaug2.svelte';
   import BackgroundCircles from './BackgroundCircles.svelte'
-	import Lp from './LP.svelte';
+	import LP from './LP.svelte';
+  // import Transform_LP from './--transform_LP.svelte';
+
 
   /* SNOW-SCRIPT END */
 
@@ -41,6 +43,7 @@
   // console.log(position);
 
 </script>
+
   <T.PerspectiveCamera
   makeDefault
   fov={cameraProps.fov}
@@ -50,20 +53,19 @@
 
   >
 
-  <!-- <OrbitControls
+  <!-- <TrackballControls
     enableZoom={false}
     enableDamping={true}
     enablePan={false}
     autoRotate={false}
-    autoRotateSpeed={0.1}
+    rotateSpeed={2}
     target={[0, 0, 0]}
-    maxPolarAngle={1.4}
-    minPolarAngle={0}
+    maxPolarAngle={2}
+    minPolarAngle={-2}
   /> -->
 
   <!-- <BackgroundCircles
   /> -->
-
   
 </T.PerspectiveCamera>
 
@@ -73,18 +75,18 @@
 /> -->
 
 <T.DirectionalLight 
-  intensity={1} 
+  intensity={0} 
   position={[15, 14, 15]}
   castShadow
 />
 
 <T.AmbientLight 
-  intensity={3} 
+  intensity={0} 
   position={[0.5, 0.5, 0.5]}
 />
 
 <ContactShadows
-  scale={10}
+  scale={0}
   blur={1}
   far={0.5}
   opacity={0.5}
@@ -100,14 +102,22 @@
   recieveShadow
 /> -->
 
-<Lp 
+<LP 
   interactive
   castShadow
 />
 
-<!-- <Snow/>
+<Plakat
+interactive
+castShadow
+/>
 
-<Snosprut/> -->
+<!-- <Transform_LP
+  interactive
+  castShadow
+/> -->
+
+<!-- <Snosprut/> -->
 
 <!-- <Text
   text="1MKA"
