@@ -14,7 +14,7 @@
     error: { error: Error };
   };
 
-  const gltf = useGltf<GLTFResult>('/models/Plakat.glb')
+  const gltf = useGltf<GLTFResult>('/models/PlakatPNG.glb')
 
   export const ref = new Group()
 
@@ -23,7 +23,7 @@
       Plane: THREE.Mesh;
     };
     materials: {
-      ['Material']: THREE.MeshStandardMaterial;
+      ['Material']: THREE.MeshBasicMaterial; /* somehow make this material transparent */
     };
   };
 
@@ -51,8 +51,9 @@
         {:then gltf}
           <T.Group 
             position={[0, 0, 0]}
+            transparent
           >
-            <T.Mesh geometry={gltf.nodes.Plane.geometry} material={gltf.materials.Material} scale={1.84} />
+            <T.Mesh geometry={gltf.nodes.Plane.geometry} material={gltf.materials.Material} transparent scale={1.84} />
           </T.Group>
         {:catch error}
           <slot name="error" {error} />
