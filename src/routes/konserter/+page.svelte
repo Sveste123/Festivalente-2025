@@ -23,8 +23,8 @@
 
 <div class="fixed-page-container">
     <div class="page-container">
-        <h1>Hvem er vi?</h1>
-        <p><strong>Her vil det komme oversikt med konsertene som skal holdes</strong></p>
+        <h1>Oversikt over konserter</h1>
+        <p><strong>Her vil det komme oversikt over konsertene som skal spilles på Festivalente</strong></p>
         <strong>(Bildene under er kun til demonstrering)</strong>
     </div>
 </div>
