@@ -40,7 +40,7 @@
 
     // Funksjonen returnerer ulike hex-koder basert på scroll-prosenten.
     function getButtonColor(percent) {
-        console.log(percent);
+        // console.log(percent);
         if (percent < 0.25) {
             return "#ff0000"; // For eksempel rød
         } else if (percent < 0.50) {
@@ -85,7 +85,7 @@
             <div class="insta-item">
                 <a href="https://www.instagram.com/p/iwyefgbc">
                     <div class="cover-item">
-                        <img alt="Blås" src="/Blowin.jpg"
+                        <img alt="Blås" src="/Molto_Maestoso.jpg"
                         />
                     </div>
                 </a>
@@ -93,7 +93,7 @@
             <div class="insta-item">
                 <a href="https://www.instagram.com/p/iwyefgbc">
                     <div class="cover-item">
-                        <img alt="Klassisk" src="/Molto_Maestoso.jpg"
+                        <img alt="Klassisk" src="/Blowin.jpg"
                         />
                     </div>
                 </a>

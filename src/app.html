@@ -100,20 +100,24 @@
 			background-color: #ffffe6; /* Bakgrunnsfarge */
 		}
 		/* Watermark */
-		.watermark-container {
-			position: fixed;
-			width: 80%;
-			height: 80%;
-			background-color: #ffffe6;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-			overflow: hidden;
-		}
 		.watermark {
 			position: fixed;
 			top: 96%;
 			left: 50%;
 			transform: translate(-50%, -50%) rotate(0deg);
 			font-size: 14.5px;
+			color: rgba(0, 0, 0, 0.3); /* Semi-transparent farge */
+			white-space: nowrap;
+			pointer-events: none; /* Gjør det ikke-klikkbart */
+			z-index: 10;
+		}
+		/* Countdown */
+		.countdown {
+			position: fixed;
+			top: 13%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(0deg);
+			font-size: 18.5px;
 			color: rgba(0, 0, 0, 0.3); /* Semi-transparent farge */
 			white-space: nowrap;
 			pointer-events: none; /* Gjør det ikke-klikkbart */
@@ -243,6 +247,9 @@
 				top: 30px;
 				left: 105px;
 				z-index: 1100;
+			}
+			.countdown {
+				top: 10%;
 			}
 
 		}
