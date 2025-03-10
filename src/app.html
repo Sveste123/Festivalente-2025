@@ -184,20 +184,18 @@
 		ul {
 			list-style-type: none; /* Fjern standard bullets */
 			padding: 0;
+			font-size: 1.2em;
 		}
 	
 		ul li {
-			background: white;
 			color: #000000;
 			padding: 4px 15px;
 			margin-bottom: 10px;
 			border-radius: 8px;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			font-size: 1.2em;
 		}
 	
 		ul li:hover {
-			background: #000000;
 			cursor: pointer;
 		}
 		/* Media Query for Narrow Screens */
@@ -304,10 +302,11 @@
 		.cover-item {
 			display: flex; /* Fjerner inline-padding/margin */
 			width: 100%; /* Fyll hele bredden */
-			height: 50vh; /* Responsiv høyde */
+			height: 100%; /* Responsiv høyde */
 			border: none; /* Sørger for at ingen kantlinje vises */
 			margin: 0; /* Fjern standard margin */
 			padding: 0; /* Fjern standard padding */
+			object-fit: cover;
 		}
 		.cover-item-nedtelling {
 			display: flex; /* Fjerner inline-padding/margin */
@@ -341,24 +340,10 @@
 		}
 		.insta-scroller-tag {
 			position: fixed; /* Fikser boksen slik at den alltid er på skjermen */
-			top: 60%; /* Plasserer senter i høyden */
+			top: 85%; /* Plasserer senter i høyden */
 			left: 50%; /* Plasserer senter i bredden */
 			transform: translate(-50%, -50%); /* Flytter elementet tilbake for perfekt sentrering */
-			width: 88%; /* Responsiv bredde */
-			max-width: 480px; /* Maks bredde for større skjermer */
-			height: 50%; /* Holder høyden proporsjonal */
-			/* border: 4px solid white; */
-			border-radius: 40px;
-			overflow: hidden;
-			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-			display: flex;
-			z-index: 900; /* Sørg for at det er over alt annet */
-			overflow-x: scroll; /* Gjør det mulig å scrolle horisontalt */
-			scroll-snap-type: x mandatory; /* Aktiverer scroll-snap-effekt */
-			gap: 10px; /* Mellomrom mellom videoer */			
-			-ms-overflow-style: none; /* Internet Explorer 10+ */
-			scrollbar-width: none; /* Firefox */
-			pointer-events: none;
+			z-index: 900;
 		}
 		.youtube-item iframe {
 			display: block; /* Fjerner inline-padding/margin */
@@ -425,34 +410,51 @@
 			color: white;
 		}
 		.insta-scroller {
-			position: fixed; /* Fikser boksen slik at den alltid er på skjermen */
-			top: 60%; /* Plasserer senter i høyden */
-			left: 50%; /* Plasserer senter i bredden */
-			transform: translate(-50%, -50%); /* Flytter elementet tilbake for perfekt sentrering */
-			width: 88%; /* Responsiv bredde */
-			max-width: 450px; /* Maks bredde for større skjermer */
-			height: 50%; /* Holder høyden proporsjonal */
-			/* border: 4px solid white; */
-			border-radius: 40px;
-			overflow: hidden;
-			/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+			position: fixed;
+			top: 54%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 88%;
+			max-width: 450px;
+			
+			/* Fjern/kommenter ut dette:
+				height: 50%; 
+			*/
+
 			display: flex;
-			z-index: 700; /* Sørg for at det er over alt annet */
-			overflow-x: scroll; /* Gjør det mulig å scrolle horisontalt */
-			scroll-snap-type: x mandatory; /* Aktiverer scroll-snap-effekt */
-			gap: 10px; /* Mellomrom mellom videoer */			
-			-ms-overflow-style: none; /* Internet Explorer 10+ */
+			gap: 10px;
+			overflow-x: scroll;
+			scroll-snap-type: x mandatory;
+			-ms-overflow-style: none; /* IE10+ */
 			scrollbar-width: none; /* Firefox */
+			border-radius: 40px;
 		}
 		.insta-item {
-			flex: 0 0 100%; /* Sørger for at én video tar hele bredden */
-			scroll-snap-align: center; /* Plasserer videoen i senter ved scrolling */
-			border-radius: 40px; /* Matcher kantene til scroller */
-			overflow: hidden; /* Hindrer innholdet i å stikke ut */
-			box-shadow: none; /* Fjern eventuell skygge her for å unngå dobbel effekt */
-			background: transparent; /* Gjør bakgrunnen usynlig for å vise kantene til scroller */
-			max-width: 60vh;
-			z-index: 700;
+			/* Sørg for at de ikke skaleres ned til 0 */
+			flex: 0 0 auto; 
+			scroll-snap-align: center;
+			
+			/* Fjern fast høyde hvis du har det noe sted */
+			width: 100%;         /* fyller containerens bredde */
+			max-width: 450px;    /* valgfri maks bredde */
+			/* aspect-ratio: 1 / 1; /* dette sikrer at høyde = bredde */
+			
+			border-radius: 40px;
+			overflow: hidden;
+			background: transparent;
+		}
+		.insta-item img {
+			width: 100%; /* Fyll hele bredden */
+			height: 100%; /* Responsiv høyde */
+			object-fit: cover;
+		}
+		@media (max-width: 500px) {
+			.insta-item {
+				border-radius: 20px;
+			}
+			.insta-scroller {
+				border-radius: 20px;
+			}
 		}
 		.insta-item iframe {
 			display: block; /* Fjerner inline-padding/margin */
@@ -475,8 +477,19 @@
 			justify-content: center;
 			width: 100%;
 			height: 100%;
-			z-index: 800;
+			z-index: 8;
 		}
+		.scroll-status {
+			padding: 10px 20px;
+			font-size: 16px;
+			border: none;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+			z-index: 100;
+			border-radius: 15px;
+		}
+
 	</style>
 	<body class="app", data-sveltekit-preload-data="hover">
 		<div class="app">%sveltekit.body%</div>
