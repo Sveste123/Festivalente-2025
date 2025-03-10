@@ -21,7 +21,7 @@
     }
 </script>
 
-<div class="fixed-page-container">
+<div class="page-container">
     <a href="https://facebook.com/o4cw3iyunr09qdcor8q289" target="_blank" style="width:74px;height:74px">
         <svg viewBox="0 0 45 45" style="width:74px;height:74px">
             <path fill="#000000" d="M44.506 22.23C44.506 9.951 34.543 0 22.253 0 9.963 0 0 9.952 0 22.23c0 11.094 8.138 20.29 18.776 21.958V28.655h-5.65V22.23h5.65v-4.897c0-5.571 3.322-8.649 8.405-8.649 2.435 0 4.981.435 4.981.435v5.47h-2.806c-2.764 0-3.626 1.714-3.626 3.472v4.17h6.172l-.987 6.425H25.73V44.19c10.638-1.668 18.776-10.864 18.776-21.96">

@@ -22,12 +22,12 @@
 </script>
 
 
-<div class="fixed-page-container">
-    <div class="page-container">
+<div class="page-container">
+    <ul>
         <h1>Hvem er vi?</h1>
-        <p><strong>Festivalente er en festival som arrangeres av Musikklinja ved Lillestrøm videregående skole.</strong></p>
-        <p><strong>Festivalen inneholder variert med musikksjangre fordelt på flere ulike konserter.</strong></p>
-    </div>
+        <li>Festivalente er en festival som arrangeres av Musikklinja ved Lillestrøm videregående skole.</li>
+        <li>Festivalen inneholder variert med musikksjangre fordelt på flere dager med ulike konserter.</li>
+    </ul>
 </div>
 
 <!-- <div class="youtube-scroller-container">
