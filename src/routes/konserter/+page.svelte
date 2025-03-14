@@ -65,7 +65,7 @@
 <div class="fixed-page-container">
     <h1>Oversikt over konserter</h1>
     <ul>
-        <li>Dette er konsertene som skal spilles på Festivalente</li>
+        <li>Trykk på plakatene for å lese mer</li>
     </ul>
 </div>
 
@@ -83,23 +83,23 @@
         </div>
         <div class="insta-scroller" on:scroll={showIndicatorFalse} bind:this={scroller}>
             <div class="insta-item">
-                <a href="https://www.instagram.com/p/iwyefgbc">
+                <a href="https://www.instagram.com/festivalente2025/p/DHETWXdiJRX/">
                     <div class="cover-item">
-                        <img alt="Blås" src="/Molto_Maestoso.jpg"
+                        <img alt="Klassisk" src="/Molto_Maestoso.jpg"
                         />
                     </div>
                 </a>
             </div>
             <div class="insta-item">
-                <a href="https://www.instagram.com/p/iwyefgbc">
+                <a href="https://www.instagram.com/festivalente2025/p/DHBbEhNCGQz/">
                     <div class="cover-item">
-                        <img alt="Klassisk" src="/Blowin.jpg"
+                        <img alt="Blås" src="/Blowin.jpg"
                         />
                     </div>
                 </a>
             </div>
             <div class="insta-item">
-                <a href="https://www.instagram.com/p/iwyefgbc">
+                <a href="https://www.instagram.com/festivalente2025/p/DHBbF6gikzm/">
                     <div class="cover-item">
                         <img alt="Country" src="/Route66.jpg"
                         />
@@ -107,7 +107,7 @@
                 </a>
             </div>
             <div class="insta-item">
-                <a href="https://www.instagram.com/p/iwyefgbc">
+                <a href="https://www.instagram.com/festivalente2025/p/DHBbJfiiQk8/">
                     <div class="cover-item">
                         <img alt="Gospel" src="/Gospel.jpg"
                         />
