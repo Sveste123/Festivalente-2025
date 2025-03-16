@@ -34,7 +34,7 @@
   const component = forwardEventHandlers()
 </script>
 
- <Theatre  studio={{ hide: false, enabled: true }} config={{ state: state }}>
+ <Theatre  studio={{ hide: true, enabled: false }} config={{ state: state }}>
   <Sequence autoplay>
     <SheetObject key="LP2" props={{ scale: 0, opacity: 0, rotationx: 0, rotationy: 0, rotationz: 0, positionx: 0, positiony: 0, positionz: 0, }} let:values>
       <T 
