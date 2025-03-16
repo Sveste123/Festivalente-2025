@@ -33,13 +33,10 @@
 </script>
 
 <div class="top-menu">
-    <!-- <a href="./">Startside</a> -->
-    <a href="./konserter">Konserter</a>
-    <!-- <a href="./konseptvideo">Konseptvideo</a> -->
-    <!-- <a href="./kontakt">Kontakt</a> -->
-    <a href="./om-oss">Om oss</a>
-    <a href="./billetter">Billetter</a>
-    <a href="./some">SoMe</a>
+    <a href="../konserter">Konserter</a>
+    <a href="../om-oss">Om oss</a>
+    <a href="../billetter">Billetter</a>
+    <a href="../some">SoMe</a>
 </div>
 
 <div class="page-container">
@@ -51,5 +48,5 @@
 </div>
 
 <div class="countdown">
-    {`${countdown.days}d ${countdown.hours}t ${countdown.minutes}m ${countdown.seconds}s`}
+    Festivalente starter om: {`${countdown.days}d ${countdown.hours}t ${countdown.minutes}m ${countdown.seconds}s`}
 </div>

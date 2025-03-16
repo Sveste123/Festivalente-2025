@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { goto } from '$app/navigation';
 
     function previousButton(e: Event){
         console.log("previousButton is clicked");
@@ -30,7 +31,7 @@
 
     // Denne reaktive deklarasjonen oppdaterer knappens farge hver gang scrollPercent endres.
     $: buttonColor = getButtonColor(scrollPercent);
-    $: textColor = getButtonColor(scrollPercent);
+    $: textColor = getTextColor(scrollPercent);
 
     function updateScroll() {
     if (!scroller) return;
@@ -42,13 +43,28 @@
     function getButtonColor(percent) {
         // console.log(percent);
         if (percent < 0.25) {
-            return "#ff0000"; // For eksempel rød
+            return "#5c1e01"; // For eksempel rød
         } else if (percent < 0.50) {
-            return "#00ff00"; // For eksempel grønn
+            return "#fefabb"; // For eksempel grønn
         } else if (percent < 0.75) {
-            return "#0000ff"; // For eksempel grønn
+            return "#fefabb"; // For eksempel grønn
         } else if (percent <= 1) {
-            return "#ff00f0"; // For eksempel grønn
+            return "#57cbf2"; // For eksempel grønn
+        } else {
+            return "#3357FF"; // For eksempel blå
+        }
+    }
+
+    function getTextColor(percent) {
+        // console.log(percent);
+        if (percent < 0.25) {
+            return "#fefabb"; // For eksempel rød
+        } else if (percent < 0.50) {
+            return "#dd3014"; // For eksempel grønn
+        } else if (percent < 0.75) {
+            return "#5c1e01"; // For eksempel grønn
+        } else if (percent <= 1) {
+            return "#dd3014"; // For eksempel grønn
         } else {
             return "#3357FF"; // For eksempel blå
         }
@@ -60,6 +76,11 @@
         updateScroll(); // Sett initial farge
     }
     });
+
+    function invite () {
+        goto(`/invitasjon`);
+    }
+
 </script>
 
 <div class="fixed-page-container">
@@ -76,9 +97,9 @@
     <button class="scroll-button left-button" aria-label="Scroll left" on:click={previousButton}>&#9664;</button>
         <div class="insta-scroller-tag" on:scroll={showIndicatorFalse}>
             <div class="insta-item">
-                <!-- <button class="scroll-status" style="background-color: {buttonColor}">
-                    Inviter
-                </button> -->
+                <button on:click={invite} class="scroll-status" style="background-color: {buttonColor}">
+                    <strong style="color: {textColor}">Inviter</strong>
+                </button>
             </div>
         </div>
         <div class="insta-scroller" on:scroll={showIndicatorFalse} bind:this={scroller}>

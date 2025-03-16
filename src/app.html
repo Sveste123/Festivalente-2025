@@ -109,7 +109,7 @@
 			color: rgba(0, 0, 0, 0.3); /* Semi-transparent farge */
 			white-space: nowrap;
 			pointer-events: none; /* Gjør det ikke-klikkbart */
-			z-index: 10;
+			z-index: 2;
 		}
 		/* Countdown */
 		.countdown {
@@ -121,7 +121,7 @@
 			color: rgba(0, 0, 0, 0.3); /* Semi-transparent farge */
 			white-space: nowrap;
 			pointer-events: none; /* Gjør det ikke-klikkbart */
-			z-index: 10;
+			z-index: -2;
 		}
 		/* Top Menu */
 		.top-menu {
@@ -490,13 +490,15 @@
 			padding: 10px 20px;
 			font-size: 16px;
 			border: none;
-			color: white;
+			color: rgb(79, 79, 79);
 			cursor: pointer;
-			transition: background-color 0.5s ease;
+			transition: 0.5s ease; /* transiston affects background-color */
 			z-index: 100;
 			border-radius: 15px;
 		}
-
+		.scroll-status strong {
+			transition: 0.5s ease; /* transiston affects color */
+		}
 	</style>
 	<body class="app", data-sveltekit-preload-data="hover">
 		<div class="app">%sveltekit.body%</div>
