@@ -27,6 +27,12 @@
 </div>
 
 <style>
+  h1 {
+			text-align: center;
+			color: rgb(0, 0, 0);
+			font-size: 1.5em;
+      margin-top: 15%;
+		}
   .app {
     z-index: -1;
   }
@@ -35,6 +41,7 @@
     width: 100%;
     max-width: 700px;
     align-content: center;
+    top: 40%;
   }
   img {
     width: 50%;
@@ -43,7 +50,7 @@
     overflow: hidden;
     background: transparent;
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
   @media (max-width: 500px) {
 			img {
