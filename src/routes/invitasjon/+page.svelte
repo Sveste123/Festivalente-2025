@@ -62,6 +62,6 @@
 	  display: none; /* Skjul standard radio-knapp */
 	}
 	input[type="radio"]:checked + .thumbnail {
-	  border: 2px solid #007bff; /* Fremhev valgt bilde */
+	  border: 8px solid #007bff; /* Fremhev valgt bilde */
 	}
   </style>
