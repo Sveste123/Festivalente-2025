@@ -40,7 +40,7 @@
       try {
         await navigator.share({
           title: document.title,
-          text: "Sjekk ut denne siden!",
+          text: "Invitasjon",
           url: window.location.href
         });
       } catch (error) {
