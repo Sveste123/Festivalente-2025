@@ -3,7 +3,6 @@
   import { onMount } from 'svelte';
   import Scene2 from '../../routes/Scene2.svelte'
   // import Renderer  from './Renderer.svelte'
-
   // import { loading } from '/src/loadingStore.ts';
 </script>
 
