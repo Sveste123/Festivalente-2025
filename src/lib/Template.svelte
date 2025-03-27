@@ -1,11 +1,12 @@
 <script>
-  export let imageChoice;
+  export let concert;
   export let sentence;
 
   import App2 from "../lib/components/App2.svelte"
 
   // Kartlegg bildevalg til bildefiler
   const imageMap = {
+    '0': '/Metro.jpg',
     '1': '/Molto_Maestoso.jpg',
     '2': '/Blowin.jpg',
     '3': '/Route66.jpg',
@@ -13,7 +14,7 @@
   };
 
   // Velg bilde basert på imageChoice, fallback til Gospel.jpg
-  $: selectedImage = imageMap[imageChoice] || '';
+  $: selectedImage = imageMap[concert] || '';
 </script>
 
 <div class="template">
@@ -23,7 +24,7 @@
 </div>
 
 <div class="app">
-  <App2 />
+  <App2/> <!-- {concert} ??? (kanskje ikke) -->
 </div>
 
 <style>
@@ -43,20 +44,20 @@
     align-content: center;
     top: 40%;
   }
-  img {
-    width: 50%;
+  .template img {
+    width: 60%;
     height: auto;
-    border-radius: 40px;
+    border-radius: 20px;
     overflow: hidden;
     background: transparent;
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  @media (max-width: 500px) {
-			img {
-        width: 75%;
-				border-radius: 20px;
-        margin-top: 10%;
+  @media (max-width: 610) {
+			.template img {
+        width: 60%;
+				border-radius: 15px;
+        margin-top: 5%;
 			}
     }
   /* .overlay-text {

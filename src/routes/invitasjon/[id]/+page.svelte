@@ -21,7 +21,7 @@
 
   // Hent kryptert melding fra URL
   $: encryptedMessage = $page.url.searchParams.get('s') || '';
-  $: imageChoice = $page.url.searchParams.get('img') || ''; // Standard til 1 hvis ikke spesifisert
+  $: concert = $page.url.searchParams.get('img') || ''; // Standard til 1 hvis ikke spesifisert
   $: decryptedMessage = encryptedMessage ? decrypt(decodeURIComponent(encryptedMessage)) : 'error';
 
   async function copyToClipboard() {
@@ -38,7 +38,7 @@
 </script>
 
 <!-- <h1>{decryptedMessage}</h1> -->
-<Template sentence={decryptedMessage} imageChoice={imageChoice} />
+<Template sentence={decryptedMessage} concert={concert} />
 
 <a href={$page.url.href} on:click={copyToClipboard}>
   <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 24 24" fill="none">

@@ -6,6 +6,7 @@
   import { useGltf } from '@threlte/extras'
   import { Theatre, SheetObject, Sequence } from '@threlte/theatre'
   import { onMount } from 'svelte'
+	import { randFloat } from 'three/src/math/MathUtils';
 
   type $$Props = Props<THREE.Group>
   type $$Events = Events<THREE.Group>
@@ -54,7 +55,39 @@
           <slot name="fallback" />
         {:then gltf}
           <T.Group 
-            position={[0, 0, 0]}
+            position={[Math.random(), Math.random(), Math.random()]}
+          >
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001.geometry} 
+              material={gltf.materials['Material.001']} 
+            />
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001_1.geometry} 
+              material={gltf.materials['Material.002']} 
+            />
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001_2.geometry} 
+              material={gltf.materials['Material.003']} 
+            />
+          </T.Group>
+          <T.Group 
+            position={[3 + Math.random(), Math.random() + 4, Math.random() + 6]}
+          >
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001.geometry} 
+              material={gltf.materials['Material.001']} 
+            />
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001_1.geometry} 
+              material={gltf.materials['Material.002']} 
+            />
+            <T.Mesh 
+              geometry={gltf.nodes.Circle001_2.geometry} 
+              material={gltf.materials['Material.003']} 
+            />
+          </T.Group>
+          <T.Group 
+            position={[-4 + Math.random(), Math.random() * -4, Math.random() + 4]}  
           >
             <T.Mesh 
               geometry={gltf.nodes.Circle001.geometry} 

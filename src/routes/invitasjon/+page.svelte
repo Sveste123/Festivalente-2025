@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
   
 	let message = '';
-	let selectedImage = 1; // Standardvalg er bilde 1
+	let selectedImage = 0; // Standardvalg er bilde 1
   
 	// Definer tegnsettet
 	const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå0123456789";
@@ -31,7 +31,7 @@
   
   <!-- Sjekkbokser med 6 små bilder -->
   <div class="image-options">
-	{#each [1, 2, 3, 4] as imgNum}
+	{#each [0, 1, 2, 3, 4] as imgNum}
 	  <label class="checkbox-container">
 		<input
 		  type="radio"
@@ -62,6 +62,6 @@
 	  display: none; /* Skjul standard radio-knapp */
 	}
 	input[type="radio"]:checked + .thumbnail {
-	  border: 2px solid #007bff; /* Fremhev valgt bilde */
+	  border: 8px solid #007bff; /* Fremhev valgt bilde */
 	}
   </style>

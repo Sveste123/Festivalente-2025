@@ -42,26 +42,30 @@
     // Funksjonen returnerer ulike hex-koder basert på scroll-prosenten.
     function getButtonColor(percent) {
         // console.log(percent);
-        if (percent < 0.25) {
+        if (percent < 0.20) {
+            return "#fefabb"; // For eksempel rød
+        } else if (percent < 0.40) {
             return "#5c1e01"; // For eksempel rød
-        } else if (percent < 0.50) {
+        } else if (percent < 0.60) {
             return "#fefabb"; // For eksempel grønn
-        } else if (percent < 0.75) {
+        } else if (percent < 0.80) {
             return "#fefabb"; // For eksempel grønn
         } else if (percent <= 1) {
             return "#57cbf2"; // For eksempel grønn
         } else {
-            return "#3357FF"; // For eksempel blå
+            return "#57cbf2"; // For eksempel blå
         }
     }
 
     function getTextColor(percent) {
         // console.log(percent);
-        if (percent < 0.25) {
+        if (percent < 0.20) {
+            return "#57cbf2"; // For eksempel rød
+        } else if (percent < 0.40) {
             return "#fefabb"; // For eksempel rød
-        } else if (percent < 0.50) {
+        } else if (percent < 0.60) {
             return "#dd3014"; // For eksempel grønn
-        } else if (percent < 0.75) {
+        } else if (percent < 0.80) {
             return "#5c1e01"; // For eksempel grønn
         } else if (percent <= 1) {
             return "#dd3014"; // For eksempel grønn
@@ -103,6 +107,14 @@
             </div>
         </div>
         <div class="insta-scroller" on:scroll={showIndicatorFalse} bind:this={scroller}>
+            <div class="insta-item">
+                <a href="https://www.instagram.com/festivalente2025/p/DHETethvgcWXdiJRX/">
+                    <div class="cover-item">
+                        <img alt="Metro" src="/Metro.jpg"
+                        />
+                    </div>
+                </a>
+            </div>
             <div class="insta-item">
                 <a href="https://www.instagram.com/festivalente2025/p/DHETWXdiJRX/">
                     <div class="cover-item">

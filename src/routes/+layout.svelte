@@ -48,5 +48,5 @@
 </div>
 
 <div class="countdown">
-    Festivalente starter om: {`${countdown.days}d ${countdown.hours}t ${countdown.minutes}m ${countdown.seconds}s`}
+    Festivalente starter om: {`${countdown.days}d : ${countdown.hours}t : ${countdown.minutes}m : ${countdown.seconds}s`}
 </div>

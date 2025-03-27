@@ -22,7 +22,7 @@
 </script>
 
 <div class="page-container">
-    <a href="https://facebook.com/o4cw3iyunr09qdcor8q289" target="_blank" style="width:74px;height:74px">
+    <a href="https://www.facebook.com/events/1093358899214739?acontext=%7B%22event_action_history%22%3A[%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22your_upcoming_events_unit%22%2C%22surface%22%3A%22bookmark%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22your_upcoming_events_unit%22%2C%22surface%22%3A%22bookmark%22%7D%2C%7B%22extra_data%22%3A%22%22%2C%22mechanism%22%3A%22your_upcoming_events_unit%22%2C%22surface%22%3A%22bookmark%22%7D]%2C%22ref_notif_type%22%3Anull%7D" target="_blank" style="width:74px;height:74px">
         <svg viewBox="0 0 45 45" style="width:74px;height:74px">
             <path fill="#000000" d="M44.506 22.23C44.506 9.951 34.543 0 22.253 0 9.963 0 0 9.952 0 22.23c0 11.094 8.138 20.29 18.776 21.958V28.655h-5.65V22.23h5.65v-4.897c0-5.571 3.322-8.649 8.405-8.649 2.435 0 4.981.435 4.981.435v5.47h-2.806c-2.764 0-3.626 1.714-3.626 3.472v4.17h6.172l-.987 6.425H25.73V44.19c10.638-1.668 18.776-10.864 18.776-21.96">
             </path>
@@ -38,12 +38,12 @@
             </use>
         </svg>
     </a>        
-    <a href="https://youtube.com/274692hifwegroiyfbiayebf3874n?s" target="_blank" style="width:74px;height:74px">
+    <!-- <a href="https://youtube.com/274692hifwegroiyfbiayebf3874n?s" target="_blank" style="width:74px;height:74px">
         <svg viewBox="0 0 48 34" style="width:74px;height:74px">
             <path fill="#000000" d="M46.724 7.168s.47 3.828.48 7.647v3.58c0 3.828-.471 7.647-.471 7.647s-.46 3.257-1.88 4.687c-1.799 1.881-3.808 1.89-4.73 2.001-6.601.47-16.521.49-16.521.49s-12.271-.111-16.051-.471c-1.051-.203-3.411-.139-5.21-2.02-1.41-1.43-1.87-4.687-1.87-4.687S0 22.214 0 18.395v-3.58c0-3.828.47-7.647.47-7.647S.922 3.91 2.342 2.482C4.14.6 6.149.59 7.072.48 13.671 0 23.582 0 23.582 0h.019s9.91 0 16.512.48c.921.11 2.931.12 4.729 2.002 1.42 1.43 1.88 4.686 1.88 4.686zM18.715 22.74l12.75-6.615-12.75-6.66V22.74z">
             </path>
         </svg>
-    </a>
+    </a> -->
 </div> 
 
 <!-- <div class="insta-scroller-container">
