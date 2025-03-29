@@ -1,9 +1,21 @@
 <script>
+    import { afterUpdate } from 'svelte';
     let user_input = '';
     let response = '';
     let loading = false;
     let chatHistory = []; // Holder styr på chat-historikken
-  
+    let chatWindow;
+
+    function scrollToBottom() {
+        if (chatWindow) {
+            chatWindow.scrollTo({
+                top: chatWindow.scrollHeight,
+                behavior: 'smooth' // For en pen scroll-animasjon
+            });
+        }
+    }
+
+
     async function submit() {
       if (!user_input.trim()) return; // Ignorer tomme input
   
@@ -30,6 +42,7 @@
       } catch (error) {
         response = 'Error: ' + error.message;
         chatHistory = [...chatHistory, { role: 'ai', content: response }];
+        scrollToBottom();
       } finally {
         loading = false;
         user_input = ''; // Tøm inputfeltet etter sending
@@ -42,6 +55,17 @@
         submit();
       }
     }
+
+    // Scroll til bunnen når chatHistory oppdateres
+    afterUpdate(() => {
+        if (chatWindow) {
+        chatWindow.scrollTo({
+            top: chatWindow.scrollHeight,
+            behavior: 'smooth'
+        });
+        }
+    });
+
   </script>
   
   <div class="container">
@@ -52,7 +76,7 @@
     </div>
   
     <!-- Chat-vindu -->
-    <div class="chat-window">
+    <div class="chat-window" bind:this={chatWindow}>
       {#if chatHistory.length === 0}
         <div class="welcome-message">
           <p>Jeg kan hjelpe deg med alt du lurer på om Festivalente. Test meg.</p>
@@ -114,16 +138,22 @@
     .container {
       display: flex;
       flex-direction: column;
-      height: 77vh;
+      height: 82vh;
       max-width: 100%;
       margin: 0 auto;
       background-color: #ffffe6;
+      z-index: 1000;
     }
   
     .header {
+      position: fixed;
+      left: 50%;
+      top: 14%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      padding: 1rem;
-      background: radial-gradient(#58cbf2 -110%, #ffffe6 70%);
+      width: 100%;
+      padding-top: 1rem;
+      /* background: linear-gradient(#58cbf2 -110%, #ffffe6 70%); */
       color: white;
     }
   
@@ -138,19 +168,26 @@
     }
   
     .chat-window {
-      height: 20%;
+      margin-top: 80px;
+      margin-bottom: 4.5%;
+      height: 100%;
+      width: 100%;
       flex: 1;
       overflow-y: auto;
       padding: 1.5rem;
       background-color: #ffffe6;
-      border-bottom: 1px solid #e0e0e0;
     }
   
     .welcome-message {
       text-align: center;
+      position: fixed;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: #666;
       font-size: 1.1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
+      width: 80%;
     }
   
     .message {
@@ -164,7 +201,7 @@
     }
   
     .message-content {
-      max-width: 70%;
+      max-width: 100%;
       padding: 0.75rem 1.25rem;
       border-radius: 1rem;
       background-color: #e0e0e0;
@@ -215,10 +252,16 @@
   
     .input-box {
       display: flex;
+      position: fixed;
+      left: 50%;
+      top: 90%;
+      transform: translate(-50%, -50%);
       align-items: center;
-      padding: 1rem;
+      width: 85%;
+      max-width: 610px;
+      padding: 3rem;
       background-color: #ffffe6;
-      border-top: 1px solid #e0e0e0;
+      border-top: 0.5px solid #e0e0e0;
       /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); */
     }
   
@@ -287,7 +330,11 @@
       }
     }
   
-    @media (max-width: 768px) {
+    @media (max-width: 610px) {
+      .container {
+        height: 74vh;
+        width: 100%;
+      }
       .header h1 {
         font-size: 2rem;
       }
@@ -297,24 +344,27 @@
       }
   
       .chat-window {
-        padding: 1rem;
+        padding: 0rem;
       }
   
       .message-content {
-        max-width: 85%;
+        max-width: 80%;
       }
   
       .input-box {
-        padding: 0.75rem;
+        padding: 1rem;
       }
   
       .input-box input {
         padding: 0.5rem 0.75rem;
-        font-size: 0.9rem;
+        font-size: 17px;
       }
   
       .input-box button {
         padding: 0.5rem;
+      }
+      .chat-window {
+        margin-bottom: 12.5%;
       }
     }
   </style>
