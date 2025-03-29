@@ -132,7 +132,7 @@
     :global(body) {
       margin: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background-color: #f5f5f5;
+      background-color: #ffffe6;
     }
   
     .container {
@@ -172,6 +172,7 @@
       margin-bottom: 4.5%;
       height: 100%;
       width: 100%;
+      max-width: 700px;
       flex: 1;
       overflow-y: auto;
       padding: 1.5rem;
@@ -338,6 +339,9 @@
       .header h1 {
         font-size: 2rem;
       }
+      .header {
+        top: 12%;
+      }
   
       .header strong {
         font-size: 2.5rem;
@@ -364,6 +368,7 @@
         padding: 0.5rem;
       }
       .chat-window {
+        margin-top: 60px;
         margin-bottom: 12.5%;
       }
     }
