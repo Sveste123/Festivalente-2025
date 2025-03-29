@@ -173,7 +173,7 @@
     }
   
     .message.user .message-content {
-      background-color: #8165ff;
+      background-color: #58cbf2;
       color: white;
     }
 
@@ -233,13 +233,13 @@
     }
   
     .input-box input:focus {
-      border-color: #6b48ff;
+      border-color: #58cbf2;
     }
   
     .input-box button {
       margin-left: 0.5rem;
       padding: 0.75rem;
-      background-color: #6b48ff;
+      background-color: #58cbf2;
       border: none;
       border-radius: 50%;
       cursor: pointer;
