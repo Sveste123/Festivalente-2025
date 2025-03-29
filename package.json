@@ -32,6 +32,8 @@
     "@threlte/theatre": "^2.1.7",
     "@vercel/analytics": "^1.5.0",
     "environment": "^1.1.0",
+    "fs": "^0.0.1-security",
+    "groq-sdk": "^0.17.0",
     "sharp": "^0.33.5",
     "svelte-tweakpane-ui": "^1.2.2",
     "three": "^0.159.0",

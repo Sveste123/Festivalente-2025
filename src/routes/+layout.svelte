@@ -34,7 +34,7 @@
 
 <div class="top-menu">
     <a href="../konserter">Konserter</a>
-    <a href="../om-oss">Om oss</a>
+    <a href="../groq">AI</a>
     <a href="../billetter">Billetter</a>
     <a href="../some">SoMe</a>
 </div>
