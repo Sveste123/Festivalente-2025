@@ -94,7 +94,7 @@
           <div class="message ai">
             <div class="message-content">
               <span class="role-label">FestivAIente:</span>
-              <p class="loading">Skriver...</p>
+              <p class="loading">Tenker..</p>
             </div>
           </div>
         {/if}
@@ -105,7 +105,7 @@
     <div class="input-box">
       <input
         bind:value={user_input}
-        placeholder="Hvor er DRA2?"
+        placeholder="Hvor er Kammersalen?"
         on:keydown={handleKeypress}
         disabled={loading}
       />
