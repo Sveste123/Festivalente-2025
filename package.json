@@ -34,6 +34,7 @@
     "environment": "^1.1.0",
     "fs": "^0.0.1-security",
     "groq-sdk": "^0.17.0",
+    "marked": "^15.0.7",
     "sharp": "^0.33.5",
     "svelte-tweakpane-ui": "^1.2.2",
     "three": "^0.159.0",

@@ -70,7 +70,7 @@
         } else if (percent <= 1) {
             return "#dd3014"; // For eksempel grønn
         } else {
-            return "#3357FF"; // For eksempel blå
+            return "#dd3014"; // For eksempel blå
         }
     }
 
