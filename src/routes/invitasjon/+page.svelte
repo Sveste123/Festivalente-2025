@@ -64,4 +64,7 @@
 	input[type="radio"]:checked + .thumbnail {
 	  border: 8px solid #007bff; /* Fremhev valgt bilde */
 	}
+	input[type="text"] {
+		font-size: 16px;
+	}
   </style>
