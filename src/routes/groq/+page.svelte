@@ -24,35 +24,34 @@
   }
 
   async function submit() {
-    if (!user_input.trim()) return;
+  if (!user_input.trim()) return;
 
-    chatHistory = [...chatHistory, { role: 'user', content: user_input }];
-    loading = true;
-    response = '';
+  chatHistory = [...chatHistory, { role: 'user', content: user_input }];
+  loading = true;
+  response = '';
 
-    try {
-      const res = await fetch('/groq-api', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user_input })
-      });
-      if (res.ok) {
-        const data = await res.json();
-        response = data.response;
-        chatHistory = [...chatHistory, { role: 'ai', content: response }];
-      } else {
-        response = 'Error: ' + res.status;
-        chatHistory = [...chatHistory, { role: 'ai', content: response }];
-      }
-    } catch (error) {
-      response = 'Error: ' + error.message;
-      chatHistory = [...chatHistory, { role: 'ai', content: response }];
-      scrollToBottom();
-    } finally {
-      loading = false;
-      user_input = '';
+  try {
+    const res = await fetch('/groq-api', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ user_input, chatHistory })  // Inkluder chatHistory
+    });
+    if (res.ok) {
+      const data = await res.json();
+      response = data.response;
+      chatHistory = [...chatHistory, { role: 'assistant', content: response }];  // Bruk "assistant"
+    } else {
+      response = 'Error: ' + res.status;
+      chatHistory = [...chatHistory, { role: 'assistant', content: response }];
     }
+  } catch (error) {
+    response = 'Error: ' + error.message;
+    chatHistory = [...chatHistory, { role: 'assistant', content: response }];
+  } finally {
+    loading = false;
+    user_input = '';
   }
+}
 
   function handleKeypress(event) {
     if (event.key === 'Enter' && !loading) {
@@ -79,14 +78,14 @@
   {#if chatHistory.length === 0}
     <div class="welcome-message">
       <p>Jeg kan hjelpe deg med alt du lurer på om Festivalente. Test meg.</p>
-      <p1>FestivAIente kan ingen navn av personverns-årsaker, men oppgi gjerne band- eller konsert- navn og spør i vei!</p1>
+      <p1>FestivAIente vet ikke hvor du skal være når; av personverns-årsaker. Oppgi gjerne band- eller konsert- navn og spør i vei!</p1>
     </div>
   {:else}
     {#each chatHistory as message}
       <div class="message {message.role}">
         <div class="message-content">
           <span class="role-label">{message.role === 'user' ? 'Du' : 'FestivAIente'}:</span>
-          {#if message.role === 'ai'}
+          {#if message.role === 'assistant'}
             {@const parsedContent = marked.parse(message.content)}
             <div>{@html parsedContent}</div>
           {:else}
@@ -96,7 +95,7 @@
       </div>
     {/each}
     {#if loading}
-      <div class="message ai">
+      <div class="message assistant">
         <div class="message-content">
           <span class="role-label">FestivAIente:</span>
           <p class="loading">Tenker..</p>
@@ -222,28 +221,28 @@
   color: white;
 }
 
-.message.ai .message-content {
+.message.assistant .message-content {
   background-color: #fff;
   color: black;
   border: 1px solid #e0e0e0;
 }
 
-.message.ai .message-content strong {
+.message.assistant .message-content strong {
   font-weight: bold;
 }
 
-.message.ai .message-content ul {
+.message.assistant .message-content ul {
   list-style: disc;
   margin-left: 20px;
   padding-left: 0;
 }
 
-.message.ai .message-content li {
+.message.assistant .message-content li {
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
 
-.message.ai .message-content div {
+.message.assistant .message-content div {
   text-align: left;
 }
 
