@@ -229,17 +229,20 @@
 
 .message.assistant .message-content strong {
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .message.assistant .message-content ul {
   list-style: disc;
   margin-left: 20px;
   padding-left: 0;
+  font-size: 0.9rem;
 }
 
 .message.assistant .message-content li {
   margin-bottom: 0.5rem;
   line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .message.assistant .message-content div {
